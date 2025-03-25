@@ -112,4 +112,14 @@ const DisplayController = (() => {
 // Start the game with default players when the page loads
 document.addEventListener("DOMContentLoaded", () => {
     GameController.startGame("Player 1", "Player 2");
+
+    const restartButton = document.getElementById("restart");
+    if (!restartButton) {
+        console.error("Restart button not found!");
+        return;
+    }
+
+    restartButton.addEventListener("click", () => {
+        console.log("Restart button clicked!");
+    });
 });
